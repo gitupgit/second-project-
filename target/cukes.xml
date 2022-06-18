@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="293.129">
+<testcase classname="user should sign up" name="user can register with valid data" time="23.85">
+<system-out><![CDATA[Given navigate to Register..................................................passed
+When user Fill his Data.....................................................passed
+And click Register..........................................................passed
+Then user should register successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should go login page" name="user login with valid data" time="17.385">
+<system-out><![CDATA[Given navigate to login page................................................passed
+When user enter "automation@gmail.com" and "123456".........................passed
+And click on login btn......................................................passed
+Then user could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should go login page" name="user login with invalid data" time="16.207">
+<failure message="invalid selector: No selector specified&#10;  (Session info: chrome=102.0.5005.115)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception&#10;Build info: version: '4.2.0', revision: '86eb611648'&#10;System info: host: 'DESKTOP-RO7J30T', ip: '192.168.1.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [82b0badbd59e2e4f239ae8368e1576ef, findElement {using=css selector, value=}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\sohah\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49800}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49800/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 82b0badbd59e2e4f239ae8368e1576ef" type="org.openqa.selenium.InvalidSelectorException"><![CDATA[Given navigate to login page................................................passed
+When user enter "test@gmail.com" and "automationtest".......................passed
+And click on login btn......................................................passed
+Then user could not login successfully......................................failed
+
+StackTrace:
+org.openqa.selenium.InvalidSelectorException: invalid selector: No selector specified
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.2.0', revision: '86eb611648'
+System info: host: 'DESKTOP-RO7J30T', ip: '192.168.1.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82b0badbd59e2e4f239ae8368e1576ef, findElement {using=css selector, value=}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\sohah\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49800}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49800/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 82b0badbd59e2e4f239ae8368e1576ef
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:566)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:376)
+	at stepDefintion.D02_loginStepDef.login_Unsuccessfully(D02_loginStepDef.java:52)
+	at ✽.user could not login successfully(file:///C:/Users/sohah/IdeaProjects/demonopecomerce/src/main/resources/features/F02_login.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="user should recover his password" name="password recovery by valid existing email adress" time="14.916">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user navigate to login page...........................................passed
+When user click forget password.............................................passed
+And fill Email field........................................................passed
+Then user get password......................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepDefintion.D03_passRecoveryStepDef.get_password(D03_passRecoveryStepDef.java:37)
+	at ✽.user get password(file:///C:/Users/sohah/IdeaProjects/demonopecomerce/src/main/resources/features/F03_passRecovry.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="guest user select currency" name="user select currency" time="10.916">
+<system-out><![CDATA[Given select currency in dropdown box.......................................passed
+Then currency should be changed.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can search" name="user can search by name" time="10.01">
+<system-out><![CDATA[Given write search keyword as "nike"........................................passed
+When click on search btn....................................................passed
+Then search result displayed................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can search" name="user can search by name 2" time="10.165">
+<system-out><![CDATA[Given write search keyword as "book"........................................passed
+When click on search btn....................................................passed
+Then search result displayed................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can search" name="user can search by sku" time="15.033">
+<system-out><![CDATA[Given write search keyword as "APPLE_CAM"...................................passed
+When click on search btn....................................................passed
+Then sku search result displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can search" name="user can search by sku 2" time="13.105">
+<system-out><![CDATA[Given write search keyword as "FL_GIRL_B"...................................passed
+When click on search btn....................................................passed
+Then sku search result displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="hover feature" name="hover scenario" time="13.29">
+<system-out><![CDATA[When select main category and subcategory...................................passed
+Then go to subcategory page.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="home slider" name="first slider" time="14.077">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When click first slider.....................................................passed
+Then open link of slider1...................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepDefintion.D07_homeSliderStepDef.getPageOfSlider(D07_homeSliderStepDef.java:26)
+	at ✽.open link of slider1(file:///C:/Users/sohah/IdeaProjects/demonopecomerce/src/main/resources/features/F07_homeSlider.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="home slider" name="second slider" time="19.348">
+<failure message="element not interactable&#10;  (Session info: chrome=102.0.5005.115)&#10;Build info: version: '4.2.0', revision: '86eb611648'&#10;System info: host: 'DESKTOP-RO7J30T', ip: '192.168.1.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [691e0914ff388c70642d15cd9b23f2f0, clickElement {id=362a0a66-e7b2-4655-8474-94d188cb7cfe}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\sohah\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50381}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50381/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (691e0914ff388c70642d15cd9b23f2f0)] -&gt; xpath: (//a[@href=&quot;http://demo.nopcommerce.com/&quot;])[2]]&#10;Session ID: 691e0914ff388c70642d15cd9b23f2f0" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[When click second slider....................................................failed
+Then open link of slider2...................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=102.0.5005.115)
+Build info: version: '4.2.0', revision: '86eb611648'
+System info: host: 'DESKTOP-RO7J30T', ip: '192.168.1.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [691e0914ff388c70642d15cd9b23f2f0, clickElement {id=362a0a66-e7b2-4655-8474-94d188cb7cfe}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\sohah\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50381}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50381/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (691e0914ff388c70642d15cd9b23f2f0)] -> xpath: (//a[@href="http://demo.nopcommerce.com/"])[2]]
+Session ID: 691e0914ff388c70642d15cd9b23f2f0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:566)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at stepDefintion.D07_homeSliderStepDef.secondSlider(D07_homeSliderStepDef.java:34)
+	at ✽.click second slider(file:///C:/Users/sohah/IdeaProjects/demonopecomerce/src/main/resources/features/F07_homeSlider.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="follow us feature" name="user select facebook" time="33.806">
+<system-out><![CDATA[Given click facebook........................................................passed
+Then navigate to facebook tab...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="follow us feature" name="user select twitter" time="15.932">
+<system-out><![CDATA[Given click twitter icon....................................................passed
+Then navigate to twitter link...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="follow us feature" name="user select Rss" time="15.099">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given click Rss icon........................................................passed
+Then navigate to Rss link...................................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at stepDefintion.D08_followUsStepDef.RssLink(D08_followUsStepDef.java:53)
+	at ✽.navigate to Rss link(file:///C:/Users/sohah/IdeaProjects/demonopecomerce/src/main/resources/features/F08_followUs.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="follow us feature" name="user select youtube" time="25.931">
+<system-out><![CDATA[Given click youtube icon....................................................passed
+Then navigate to youtube link...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add items to wish list" name="add item to wish list" time="23.432">
+<system-out><![CDATA[When click on wish icon.....................................................passed
+Then notification bar visible...............................................passed
+And get number of added items...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

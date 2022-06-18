@@ -1,0 +1,4 @@
+file:src/main/resources/features/F02_login.feature:13
+file:src/main/resources/features/F03_passRecovry.feature:4
+file:src/main/resources/features/F07_homeSlider.feature:4:9
+file:src/main/resources/features/F08_followUs.feature:14
